@@ -14,7 +14,7 @@ public class add_overloading
     public static void main()
     {
         add_overloading obj = new add_overloading();
-        obj.add(31.7,6.5); // It is of double add
-        obj.add(6,13); // It is int add
+        obj.add(20.0,10.0); // double add()
+        obj.add(10,22); // int add()
     }
 }
