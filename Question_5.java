@@ -1,5 +1,5 @@
 //Question 5
-import java.util.*;
+import java.util.Scanner;
 public class Question_5
 {
     public static void main()
