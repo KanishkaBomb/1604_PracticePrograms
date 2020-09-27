@@ -1,7 +1,7 @@
 // WAP to print the given pattern
 public class Question_10
 {
-    public static void main()
+    void patterns()
     {    
         
         for(int i=1;i<=5;i++)
@@ -17,19 +17,21 @@ public class Question_10
                    {
                        System.out.print(" # ");
                     }
-                    
-               
-               
             }
-               System.out.println();
+            System.out.println();
                }
-               for(int i=1;i<=5;i++)
-               {
-                   for(int j=5;j>=i;j--)
-                   {
-                      System.out.print(j);
-                    }
-                    System.out.println();
-                }
-               }
+        for(int i=1;i<=5;i++)
+        {
+            for(int j=5;j>=i;j--)
+            {
+               System.out.print(j);
             }
+            System.out.println();
+        }
+             }
+    public static void main()
+    {
+        Question_10 obj= new Question_10();
+        obj.patterns();
+    }
+}

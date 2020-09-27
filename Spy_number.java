@@ -1,11 +1,16 @@
 import java.util.Scanner;
 public class Spy_number
 {
-    public static void main()
+    int num;
+    void init()
     {
         Scanner sc= new Scanner (System.in);
         System.out.println("Enter a number");
-        int num= sc.nextInt();
+        num= sc.nextInt();
+    }
+    
+    void check()
+    {
         int sum=0,rem,pro=1;
         while(num!=0)
         {
@@ -17,13 +22,20 @@ public class Spy_number
         if(sum==pro)
         {
             System.out.println("Spy number");
-            }
-            else
+        }
+        else
             {
                 System.out.println("Not a spy number");
-                }
             }
-        }
+    }
+    public static void main()
+    {
+        Spy_number obj = new Spy_number();
+        obj.init();
+        obj.check();
+    }
+}
+
                 
                 
          

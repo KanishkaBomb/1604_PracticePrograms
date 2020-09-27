@@ -2,12 +2,16 @@
 import java.util.*;
 public class Armstrong 
 {
-    public static void main()
+    int num;
+    void input()
     {
         Scanner sc = new Scanner (System.in);
         System.out.println(" Enter a number");
-        int num = sc.nextInt();
-        
+        num = sc.nextInt();
+    }
+    
+    void check()
+    {
         int T1=num,len,sum=0;
         while( T1!=0)
         {
@@ -25,5 +29,12 @@ public class Armstrong
             {
                 System.out.println(" Not an armstrong number");
                 }
-                }
-            }
+    }
+    
+    public static void main()
+    {
+        Armstrong obj = new Armstrong();
+        obj.input();
+        obj.check();
+    }
+}

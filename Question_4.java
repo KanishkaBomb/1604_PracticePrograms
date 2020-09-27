@@ -1,23 +1,29 @@
 //Bank deposit
-import java.util.*;
+import java.util.Scanner;
 public class Question_4
-{
-    public static void main()
+{    
+    int ch;
+    double P,r,n;
+    void input()
     {
         Scanner sc= new Scanner(System.in);
-        System.out.println("Enter Principal/monthly installment,rate of interest and time period");
-        double P=sc.nextDouble();
-         double r=sc.nextDouble();
-         double n=sc.nextDouble();
-        System.out.println("1. Term Deposit");// asking the user for his/her choice
+        System.out.println("Enter Principal/monthly installment");
+        P=sc.nextDouble();
+        System.out.println("Enter the rate of interest");
+        r=sc.nextDouble();
+        System.out.println("Enter the time period");
+        n=sc.nextDouble();
+        System.out.println("Enter 1 or 2 based on your choice:"+"\n"+"1. Term Deposit");// asking the user for his/her choice
         System.out.println("2. Recurring Deposit");
-        System.out.println("Enter 1 or 2");
-        int ch=sc.nextInt();
-        double A=0;
-        switch(ch)
+        ch=sc.nextInt();
+    }
+    void result()
+    {
+         double A=0;
+         switch(ch)
         {
            case 1:
-           A=P*Math.pow((1+r/100),n); // term deposit
+           A=P*Math.pow((1+r/100),n); // term deposit 
             System.out.println(A);
             break;
         case 2:
@@ -27,5 +33,11 @@ public class Question_4
         default:
         System.out.println("Invalid number entered");
         }
-        }
+    }
+    public static void main()
+    {
+        Question_4 obj = new Question_4();
+        obj.input();
+        obj.result();
+    }
     }

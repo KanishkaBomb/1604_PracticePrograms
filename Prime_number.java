@@ -2,13 +2,16 @@
 import java.util.*;
 public class Prime_number
 {
-    public static void main()
+    int num;
+    void input()
     {
         Scanner sc= new Scanner (System.in);
-        System.out.println(" Enter num");
-        int num= sc.nextInt();
-        
-        
+        System.out.println(" Enter a number.");
+        num= sc.nextInt();
+    }
+    
+    void check()
+    {
         int count = 0;
         for(int i= 2; i<num;i++)
         {
@@ -19,11 +22,18 @@ public class Prime_number
         }
         if(count == 0)
         {
-            System.out.println("Prime no.");
+            System.out.println("Prime number");
             }
             else
             {
-                System.out.println(" Not a prime no.");
+                System.out.println(" Not a prime number");
                 }
-                }
-            }
+    }
+    
+    public static void main()
+    {
+        Prime_number obj = new Prime_number();
+        obj.input();
+        obj.check();
+    }
+}

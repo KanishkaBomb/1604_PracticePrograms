@@ -1,14 +1,16 @@
-//Question 5
 import java.util.Scanner;
 public class Question_5
 {
-    public static void main()
+    int n;
+    void choice()
     {
     Scanner sc= new Scanner(System.in);
     System.out.println("Enter 1 for pattern 1");
     System.out.println("Enter 2 for pattern 2");//asking the user to enter his/her choice 
-    int n= sc.nextInt(); 
-    
+    n= sc.nextInt(); 
+    }
+    void pattern()
+    {
     if(n==1)
     {
         for(int i=1;i<=5;i++)
@@ -38,5 +40,11 @@ public class Question_5
     {
          System.out.println("Wrong entry");
         }
+    }
+    public static void main()
+    {
+        Question_5 obj = new Question_5();
+        obj.choice();
+        obj.pattern();
     }
 }
