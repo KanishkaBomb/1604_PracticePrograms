@@ -1,9 +1,9 @@
 import java.util.*;
-public class time
+public class Time
 {
     int h,m;
     
-    public time()
+    public Time()
     {
         h = 0;
         m=0;
@@ -16,9 +16,9 @@ public class time
         m = sc.nextInt();
     }
     
-    public time add (time obj) //formal parameter = mention data type = in function prototype   
+    public Time add (Time obj) //formal parameter = mention data type = in function prototype   
     {
-        time t = new time();
+        Time t = new Time();
         t.h = h + obj.h;
         t.m = m + obj.m;
         if(t.m >= 60)
@@ -36,9 +36,9 @@ public class time
     
     public static void main()
     {
-        time t1 = new time();
-        time t2 = new time();
-        time t3 = new time();
+        Time t1 = new Time();
+        Time t2 = new Time();
+        Time t3 = new Time();
         t1.input();
         t2.input();
         t3 = t1.add(t2); //actual parameter = calling statement= no need to mention data type 

@@ -1,24 +1,31 @@
-// WAP using return statement
-public class demo1
-{
-    int num1,num2,ans;
-    void init(int n1,int n2)
-    {
-        num1=n1;
-        num2=n2;
-    }
-    double calc()
-    {
-        ans= num1+num2;
-        return ans;
-    }
-    public static void main()
-    {
-        demo1 obj= new demo1();
-        obj.init(7,20);
-        double ans= obj.calc();
-        System.out.println(ans);
-        }
-        }
-        
-        
+import java.util.Scanner;
+ public class Demo1
+ {
+     int x;
+     public Demo1()
+     {
+         x = 0;
+     }
+     public Demo1 (int x)
+     {
+             this.x = x;
+     }
+     
+     void display()
+     {
+         System.out.println(x);
+     }
+     
+     public static void main()
+     {
+           Demo1 obj=new Demo1();
+           System.out.println("Value of Default constructor:");
+           obj.display();
+           Scanner sc = new Scanner(System.in);
+           System.out.println("Enter a value to initialize the variable");
+           int x = sc.nextInt();
+           Demo1 obj1 = new Demo1( x);
+           System.out.println("Value of parameterised constructor:");
+           obj1.display();
+     }
+ }
