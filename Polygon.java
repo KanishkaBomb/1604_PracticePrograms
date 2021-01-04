@@ -3,10 +3,6 @@ public class Polygon
 {
     void polygon(int n, char ch)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the side of the square and the character in which the square should be formed");
-        n=sc.nextInt();
-        ch=sc.next().charAt(0);
         for(int i = 1; i<=n;i++)
         {
             for(int j =1;j<=n;j++)
@@ -19,11 +15,7 @@ public class Polygon
     
     void polygon(int x, int y)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the length and the breadth of the rectangle");
-        x= sc.nextInt();
-        y=sc.nextInt();
-        for(int i =1;i<=x;i++)
+         for(int i =1;i<=x;i++)
         {
             for(int j = 1;j<=y;j++)
             {
@@ -62,10 +54,19 @@ public class Polygon
         switch(choice)
         {
             case 1:
-            obj.polygon(5,'*');
+           
+            System.out.println("Enter the side of the square.");
+            int n=sc.nextInt();
+            System.out.println("Enter the character in which the square should be formed");
+            char ch=sc.next().charAt(0);
+            obj.polygon(n,ch);
             break;
             case 2:
-            obj.polygon(5,7);
+            System.out.println("Enter the length of the rectangle.");
+            int x= sc.nextInt();
+            System.out.println("Enter the breadth of the rectangle");
+            int y=sc.nextInt();
+            obj.polygon(x,y);
             break;
             case 3:
             obj.polygon();

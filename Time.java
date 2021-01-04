@@ -1,19 +1,49 @@
-public class Time
+import java.util.*;
+public class time
 {
-    double hr,min,sec,con1;
-    void accept( double hour, double minutes, double secs)
+    int h,m;
+    
+    public time()
     {
-        hr=hour;
-        min=minutes;
-        sec= secs;
+        h = 0;
+        m=0;
     }
-    void convert()
+    
+    public void input()
     {
-         con1= (hr*60*60)+(min*60)+sec;
-        
+        Scanner sc = new Scanner(System.in);
+        h =sc.nextInt();
+        m = sc.nextInt();
     }
-    void Result()
+    
+    public time add (time obj) //formal parameter = mention data type = in function prototype   
     {
-        System.out.println(con1);
+        time t = new time();
+        t.h = h + obj.h;
+        t.m = m + obj.m;
+        if(t.m >= 60)
+        {
+            t.m = t.m - 60;
+            t.h = t.h +1;
+        }
+        return t;
+    }
+    
+    public void display()
+    {
+        System.out.println("t.m:" + m + "\n"+ "t.h:" + h);
+    }
+    
+    public static void main()
+    {
+        time t1 = new time();
+        time t2 = new time();
+        time t3 = new time();
+        t1.input();
+        t2.input();
+        t3 = t1.add(t2); //actual parameter = calling statement= no need to mention data type 
+        t1.display();
+        t2.display();
+        t3.display();  // call by reference when we pass objects as parameters
     }
 }

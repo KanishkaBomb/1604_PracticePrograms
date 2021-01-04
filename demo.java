@@ -1,18 +1,31 @@
-public class demo
-{
-    int num1,num2,ans;
-    void init(int a, int b) //non parametrized, void, called single method
-    {
-        num1=a;
-        num2=b;//body of the prog
-    }
-    void calc()
-    {
-        ans= num1+num2;
-    }
-    void display()
-    {
-        System.out.println(ans);
-    }
-}
-        
+import java.util.Scanner;
+ public class Demo
+ {
+     int x;
+     public Demo()
+     {
+         x = 0;
+     }
+     public Demo (int x)
+     {
+             this.x = x;
+     }
+     
+     void display()
+     {
+         System.out.println(x);
+     }
+     
+     public static void main()
+     {
+           Demo obj=new Demo();
+           System.out.println("Value of Default constructor:");
+           obj.display();
+           Scanner sc = new Scanner(System.in);
+           System.out.println("Enter a value to initialize the variable");
+           int x = sc.nextInt();
+           Demo obj1 = new Demo( x);
+           System.out.println("Value of parameterised constructor:");
+           obj1.display();
+     }
+ }
